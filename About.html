@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Allan's Technology</title>
+ 
+  <style>
+    /* --- CSS RESET & BASE STYLES --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-box: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      background-color: #b9ecf9;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* --- HEADER & NAVIGATION --- */
+    header {
+      background-color: #2d3748; /* Matching the dark grey/blue navbar in your screenshot */
+      color: #ffffff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      opacity: 0.9;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #3182ce; /* Active link blue accent */
+      opacity: 1;
+    }
+
+    /* --- ABOUT SECTION --- */
+    .about-section {
+      padding: 80px 20px;
+    }
+
+    .about-container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    /* Two-Column Row */
+    .about-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      margin-bottom: 70px;
+    }
+
+    .about-col {
+      flex: 1;
+    }
+
+    /* Left Side: Image Container */
+    .image-container {
+      position: relative;
+    }
+
+    .about-img {
+      width: 100%;
+      max-width: 800px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+      background-color: #e2e8f0; /* Gray fallback background in case the image fails to load */
+      display: block;
+    }
+
+    /* Right Side: Text */
+    .section-tagline {
+      color: #3182ce;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: #1a202c;
+      margin-bottom: 24px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .about-description {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #4a5568;
+      margin-bottom: 20px;
+    }
+
+    /* --- VALUES CARD SECTION --- */
+    .values-section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #1a202c;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .values-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 70px;
+    }
+
+    .value-card {
+      flex: 1;
+      background: #ffffff;
+      padding: 35px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border: 1px solid #edf2f7;
+    }
+
+    .value-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .value-icon {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .value-card h3 {
+      font-size: 1.3rem;
+      color: #2d3748;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .value-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #718096;
+    }
+
+    /* --- CALL TO ACTION (CTA) --- */
+    .about-cta {
+      text-align: center;
+      background: #2d3748;
+      color: #ffffff;
+      padding: 50px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-cta h4 {
+      font-size: 1.75rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .about-cta p {
+      font-size: 1.05rem;
+      opacity: 0.85;
+      margin-bottom: 24px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #3182ce;
+      color: #ffffff;
+      padding: 14px 35px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #2b6cb0;
+      transform: translateY(-1px);
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      background-color: #1a202c;
+      color: #a0aec0;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid #2d3748;
+    }
+
+    /* --- RESPONSIVE LAYOUT (Mobile-Friendly) --- */
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .about-row {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .about-img {
+        max-width: 100%;
+        height: auto;
+        max-height: 280px;
+      }
+
+      .values-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">Allan's Technology</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="about-section">
+    <div class="about-container">
+      
+      <!-- Top Section: Image & Intro text -->
+      <div class="about-row">
+        <!-- Left: Image Box -->
+        <div class="about-col image-container">
+          
+          <img src="company.jpg" width="200" height="200" alt="About Allan's Technology Logo" class="about-img">
+        </div>
+        
+        <!-- Right: Professional Narrative -->
+        <div class="about-col">
+          <h3 class="section-tagline">Our Mission</h3>
+          <h2 class="section-title">Your Trusted Technology Partner</h2>
+          <p class="about-description">
+            Allan's Technology offers innovative, reliable, and high-quality ICT solutions. We design customized services for schools, local businesses, and individuals who want to make their workflows faster, simpler, and more efficient.
+          </p>
+          <p class="about-description">
+            Our goal is to deliver affordable yet completely professional technology systems. From custom web development and robust software to secure network planning, clean graphic designs, and around-the-clock IT support, we cover all your technical needs in one place.
+          </p>
+        </div>
+      </div>
+
+      <!-- Center: Company Values Title -->
+      <h2 class="values-section-title">What Sets Us Apart</h2>
+
+      <!-- Bottom Grid: Three Core Cards -->
+      <div class="values-row">
+        <!-- Card 1 -->
+        <div class="value-card">
+          <div class="value-icon">⚡</div>
+          <h3>Fast & Reliable</h3>
+          <p>We build optimized solutions and provide rapid troubleshooting so your tools work flawlessly, everyday.</p>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="value-card">
+          <div class="value-icon">🛡️</div>
+          <h3>Modern & Secure</h3>
+          <p>We stay updated with cutting-edge tech stacks and security protocols to safeguard your organization's data.</p>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Client-Centered</h3>
+          <p>We work closely with you. Your budget, target audience, and workflow goals drive everything we construct.</p>
+        </div>
+      </div>
+
+      <!-- Footer Action Block -->
+      <div class="about-cta">
+        <h4>Have an upcoming project?</h4>
+        <p>Let us help you bring your ideas to life with modern technology solutions.</p>
+        <a href="#contact" class="cta-button">Get a Free Consultation</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="copyright">
+
+© 2026 Allan's Technology.
+
+All Rights Reserved.
+
+</p>
+  </footer>
+
+</body>
+</html>
+

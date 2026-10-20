@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+      <style>
+        body{
+            background: #b9ecf9;
+        }
+         header {
+      background-color: #2d3748; /* Matching the dark grey/blue navbar in your screenshot */
+      color: #ffffff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+       .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      opacity: 0.9;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #3182ce; /* Active link blue accent */
+      opacity: 1;
+    }
+
+
+button{
+    text-decoration: none;
+    color: #000;
+    position: absolute;
+    text-align: center;
+    text-item: center;
+}
+button:hover{
+    color: rgb(59,174, 209);
+}
+#details{
+background:#ffffff;
+}
+form{
+    width:100%;
+    max-width:700px;
+    margin:auto;
+
+}
+h1{
+    text-align: center;
+    color: black;
+}
+p{
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+     <header>
+    <div class="nav-container">
+      <div class="logo">Allan's Technology</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <h1> Ready to start You Project</h1>
+    <p>Tell us  about your goals, and we'll provide a free <br> consultation and project roadmap. </p><br>
+    <br>
+    <section id="details">
+    <form action="text"><label for="#">Full Name:</label><br> 
+        <br>
+    <input type="text"name="fullname"placeholder="Full Name"required><br>
+    <br>
+    <label for="#">Email Address:</label><br>
+    <br>
+    <input type="text"name="fullname"placeholder="Email"required><br>
+    <br>
+     <label for="#">Password:</label><br>
+    <br>
+    <input type="text"name="fullname"placeholder="password"required><br>
+    <br>
+    <label for="#">Interested Service</label><br>
+    <br>
+<select name="Select a Service" id="Select a Service">
+    <option value="text">Select a Service:</option>
+     <option value="text"> Web Design(UX/UI)</option>
+        <option value="text"> Web Development</option>
+        <option value="text"> Graphic Design/Branding</option>
+        <option value="text"> Full Package(Design&Development)</option>
+</select><br>
+<br>
+    <button type="submit"><a href="Allan's Tech2.html">Send Message</a></button>
+    </form>
+    </section>
+</body>
+</html>
