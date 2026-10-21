@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Allan's Technology</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navigation bar */
+        header {
+            background-color: #071b35;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00bcd4;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        /* Gallery introduction */
+        .hero {
+            text-align: center;
+            padding: 55px 20px;
+            background: linear-gradient(135deg, #071b35, #1261a0);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 16px;
+        }
+
+        /* Gallery sections */
+        .gallery-section {
+            padding: 40px 7%;
+        }
+
+        .gallery-section h2 {
+            color: #071b35;
+            margin-bottom: 8px;
+            font-size: 26px;
+        }
+
+        .section-description {
+            color: #666;
+            margin-bottom: 22px;
+        }
+
+        /* Responsive picture columns */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .gallery-caption {
+            padding: 15px;
+        }
+
+        .gallery-caption h3 {
+            color: #1261a0;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .gallery-caption p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #071b35;
+            color: white;
+            padding: 22px;
+            margin-top: 20px;
+        }
+
+        /* Tablet */
+        @media (max-width: 900px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* Mobile phone */
+        @media (max-width: 550px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-section {
+                padding: 30px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header and navigation -->
+    <header>
+        <div class="logo">Allan's Technology</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="hero">
+        <h1>Our Gallery</h1>
+        <p>Explore our projects, technology, designs, and activities.</p>
+    </section>
+
+    <!-- Section 1: Web development -->
+    <section class="gallery-section">
+        <h2>Web Development</h2>
+        <p class="section-description">
+            Websites and web applications developed by Allan's Technology.
+        </p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="business.png" alt="Website project one">
+                <div class="gallery-caption">
+                    <h3>Business Website</h3>
+                    <p>A professional website for a business.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="web.jpg" alt="Website project two">
+                <div class="gallery-caption">
+                    <h3>Web Application</h3>
+                    <p>A modern web application interface.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="responsive.jpg" alt="Website project three">
+                <div class="gallery-caption">
+                    <h3>Responsive Design</h3>
+                    <p>A website designed for different screens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Graphics design -->
+    <section class="gallery-section">
+        <h2>Graphics Design</h2>
+        <p class="section-description">
+            Creative posters, logos, banners, and other designs.
+        </p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="logo.png" alt="Graphic design one">
+                <div class="gallery-caption">
+                    <h3>Logo Design</h3>
+                    <p>Creative branding and logo designs.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="poster.png" alt="Graphic design two">
+                <div class="gallery-caption">
+                    <h3>Poster Design</h3>
+                    <p>Posters for events and promotions.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="digital.png" alt="Graphic design three">
+                <div class="gallery-caption">
+                    <h3>Digital Artwork</h3>
+                    <p>Digital graphics and creative artwork.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Computer and networking -->
+    <section class="gallery-section">
+        <h2>Computer Repair & Networking</h2>
+        <p class="section-description">
+            Computer maintenance, hardware, and networking projects.
+        </p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="mantainance.jpg" alt="Computer repair">
+                <div class="gallery-caption">
+                    <h3>Computer Maintenance</h3>
+                    <p>Computer repair and hardware servicing.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Networking.jpg" alt="Networking project">
+                <div class="gallery-caption">
+                    <h3>Networking</h3>
+                    <p>Network setup and configuration.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="setup.png" alt="Computer setup">
+                <div class="gallery-caption">
+                    <h3>Computer Setup</h3>
+                    <p>Computer installation and configuration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Software and technology -->
+    <section class="gallery-section">
+        <h2>Software & Technology</h2>
+        <p class="section-description">
+            Software projects, programming, and technology solutions.
+        </p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="software.jpg" alt="Software project one">
+                <div class="gallery-caption">
+                    <h3>Software Development</h3>
+                    <p>Applications built to solve real problems.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="project.jpg" alt="Technology project">
+                <div class="gallery-caption">
+                    <h3>Technology Projects</h3>
+                    <p>Innovative digital solutions.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="programming.png" alt="Programming project">
+                <div class="gallery-caption">
+                    <h3>Programming</h3>
+                    <p>Code, databases, and software interfaces.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Allan's Technology. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
